@@ -1,6 +1,6 @@
 function myFunction() {
   
- var hidukenow=new Date();
+ var hiduke=new Date();
   Logger.log(hidukenow)
   //日付とるやーつ
   
