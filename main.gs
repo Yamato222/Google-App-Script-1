@@ -50,7 +50,7 @@ function generateMailText(index, subject) {
 
   
   function sendMail(emailTo, subject, email_body) {
-    var title = subject + "の件について"
+    var title = subject + "の件につきまして"
     var emailFrom = "yamato.shogo@di-v.co.jp"
     var sender = "大和省悟"  
   
