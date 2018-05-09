@@ -1,7 +1,7 @@
 function myFunction() {
   
- var hiduke=new Date();
-  Logger.log(hiduke)
+ var hidukenow=new Date();
+  Logger.log(hidukenow)
   //日付とるやーつ
   
   var dtA = new Date('4/06/2018 19:00:10');
@@ -40,7 +40,7 @@ function generateMailText(index, subject) {
  
  
   
-  if(hiduke>dtA){
+  if(>dtA){
  //現在時刻がリマインドしたい時刻を超えたら
  
 
