@@ -38,23 +38,16 @@ function generateMailText(index, subject) {
   return emailBody
 }
  
+ 
+  
   if(hiduke>dtA){
  //現在時刻がリマインドしたい時刻を超えたら
-    
-  var query = `subject:(ご提案)`
-  var threads = GmailApp.search(query,0.100);
-  var messages = GmailApp.getmessagesForThreads(threads);
-    for(var i=0;i < messages.length;i++){
-      for(var j=0;j < messages[i].length;j++){
-        var body = messsages[i][j].getPlainBody();
-        
-                             
-    
-    
-    
-    
-    
+ 
+
   /* メールを送信 */
+  
+  
+
   
   function sendMail(emailTo, subject, email_body) {
     var title = subject + "の件について"
@@ -73,7 +66,3 @@ function generateMailText(index, subject) {
   }
 }
 }
-
-
-
-
