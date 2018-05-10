@@ -47,9 +47,7 @@ function generateMailText(index, subject) {
     for(var i=0;i < messages.length;i++){
       for(var j=0;j < messages[i].length;j++){
         var body = messsages[i][j].getPlainBody();
-        Logger.log(fetchDate(body,'名前':','\r');
-                             }
-                             }
+        Logger.log(fetchDate(body,'名前':','\r'));
                              
     
     
