@@ -47,13 +47,15 @@ function generateMailText(index, subject) {
   /* メールを送信 */
   
   var query = 'subject:(ご提案)'
-  var threads = GmailApp.search(query,0.100);
+  var threads = GmailApp.search(query,0.200);
   var messages = GmailApp.getmessagesForThreads(threads);
     for(var i=0;i < messages.length;i++){
       for(var j=0;j < messages[i].length;j++){
         var body = messsages[i][j].getPlainBody();
         }
         }
+ 
+ 
         
 
   
