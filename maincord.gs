@@ -38,27 +38,42 @@ function generateMailText(index, subject) {
   return emailBody
 }
  
- 
-  
   if(hiduke>dtA){
  //現在時刻がリマインドしたい時刻を超えたら
  
-
   /* メールを送信 */
   
-  var query = 'subject:(ご提案)'
-  var threads = GmailApp.search(query,0.200);
-  var messages = GmailApp.getmessagesForThreads(threads);
-    for(var i=0;i < messages.length;i++){
-      for(var j=0;j < messages[i].length;j++){
-        var body = messsages[i][j].getPlainBody();
-        }
-        }
- 
- 
-        
-
+  //メール取得したい
   
+function searchContactMail(){
+  var strTerms = 'label:all';
+  var numMailMax = 500;
+  var numMail = 300;
+  var myThreads;
+  var maMsgs;
+  var valMsgs;
+  
+  var i = SpreadsheetApp.getActiveSheet().getLastRow();
+  
+  if(i<numMailMax) {
+    valMsgs = [];
+    myThreads = GmailApp.search(strTerms,i,numMail);
+    myMsgs = GmailApp.getMessagesForThreads(myThreads);
+    
+    for(var j = 0;j < myMsgs.length;j++){
+      valMsgs[j] = [];
+      valMsgs[j][0] = myMsgs[j][0].getFrom();
+      valMsgs[j][1] = myMsgs[j][0].getReplyTo();
+      valMsgs[j][2] = myMsgs[j][0].getTo();
+      valMsgs[j][3] = myMsgs[j][0].getDate();
+      valMsgs[j][4] = myMsgs[j][0].getSubject();
+    }
+    
+    if(MyMsgs.length>0){
+       SpreadsheetApp.getActiveSheet().getRange(i + 1, 1, j, 5).setValues(valMsgs)
+  
+  
+ 
   function sendMail(emailTo, subject, email_body) {
     var title = subject + "の件について"
     var emailFrom = "yamato.shogo@di-v.co.jp"
@@ -71,8 +86,12 @@ function generateMailText(index, subject) {
       {
         from: emailFrom,
         name: sender
-      }
-    )  
-  }
+     　 }
+   　 )
+  　}
+　}
+　}
+　} 
+} 
 }
-}
+
