@@ -38,7 +38,7 @@ function generateMailText(index, subject) {
   return emailBody
 }
  
-  if(hiduke>dtA){
+  if(hidukenow>dtA){
  //現在時刻がリマインドしたい時刻を超えたら
  
   /* メールを送信 */
