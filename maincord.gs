@@ -11,6 +11,7 @@ function myFunction() {
  var spreadsheet = SpreadsheetApp.openById('1TSMaQgFgbsBVZlevdQ6wFnU87v6Z2K77Zuha4N3NUSA');  //このスプレッドシート開いてねってやーつ
  var sheet = spreadsheet.getSheetByName('メール送信リスト');　　//このシート開いてねってやーつ
  
+ 
  var lastRowNumber = sheet.getLastRow();　　//sheet.getLastRow()ではシート全体から最終行番号を返してくる？が、Range.getLastRowは指定されたセル範囲からデータが入っているかどうかは関係なく最後の行番号を返してくるらしい。
  var range = sheet.getRange(2,1,lastRowNumber,10).getValues();　　//rangeはstring型。セルの番地(C3、のような)を指定する。  //range.getValuesは、値を二重配列で取得?
  Logger.log(range[0])
